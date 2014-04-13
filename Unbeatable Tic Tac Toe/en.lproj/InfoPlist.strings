@@ -1,0 +1,4 @@
+/* Localized versions of Info.plist keys */
+
+"CFBundleDisplayName" = "Unbeatable Tic Tac Toe";
+"CFBundleName" = "Unbeatable Tic Tac Toe";
