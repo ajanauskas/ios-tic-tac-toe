@@ -57,4 +57,24 @@
     }
 }
 
+- (NSInteger)emptyCells
+{
+    NSInteger emptyCellsCount = 0;
+    
+    for (NSInteger i = 0; i < kBoardSize; i++) {
+        if ([self canMarkCellAt:i]) {
+            emptyCellsCount += 1;
+        }
+    }
+    
+    return emptyCellsCount;
+}
+
+- (void)reset
+{
+    for (NSInteger i = 0; i < kBoardSize; i++) {
+        [self.cells replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:kEmpty]];
+    }
+}
+
 @end

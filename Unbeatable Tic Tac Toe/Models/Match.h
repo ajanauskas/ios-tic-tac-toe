@@ -9,11 +9,17 @@
 #import <Foundation/Foundation.h>
 #import "Board.h"
 
+static const NSInteger kInProgress = 0;
+static const NSInteger kEnded = 1;
+
 @interface Match : NSObject
 
 @property (strong, nonatomic) Board *board;
 @property BOOL playerStarts;
 
 - (Match*)initWithPlayerStarts:(BOOL)playerStarts;
+- (BOOL)makeMoveAtCell:(NSInteger)index;
+- (NSInteger)getMatchStatus;
+- (void)reset;
 
 @end

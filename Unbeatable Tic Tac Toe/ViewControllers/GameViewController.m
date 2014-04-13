@@ -62,9 +62,38 @@
 {
     NSInteger tag = [sender tag];
     
-    [self.match.board markCellWithCircleAt:tag - 1];
+    [self.match makeMoveAtCell:tag - 1];
     
     [self redrawBoard];
+    
+    if ([self.match getMatchStatus] == kEnded) {
+        NSString *alertTitle = NSLocalizedString(@"game_alert_title", nil);
+        NSString *alertMessage = NSLocalizedString(@"game_alert_message", nil);
+        NSString *alertCancelButton = NSLocalizedString(@"game_alert_cancel_button", nil);
+        NSString *alertContinueButton = NSLocalizedString(@"game_alert_continue_button", nil);
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:alertTitle
+                                                            message:alertMessage
+                                                           delegate:self
+                                                  cancelButtonTitle:alertCancelButton
+                                                  otherButtonTitles:alertContinueButton, nil];
+        
+        [alertView show];
+    }
+}
+
+#pragma UIAlertView delegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        // clicked cancel
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    else {
+        [self.match reset];
+        [self redrawBoard];
+    }
 }
 
 @end

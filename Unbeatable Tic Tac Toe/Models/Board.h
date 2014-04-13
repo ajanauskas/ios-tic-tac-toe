@@ -23,5 +23,7 @@ static const int kBoardSize = 9;
 - (BOOL)isCellFilledByCircleAt:(NSInteger)index;
 - (void)markCellWithCrossAt:(NSInteger)index;
 - (void)markCellWithCircleAt:(NSInteger)index;
+- (NSInteger)emptyCells;
+- (void)reset;
 
 @end

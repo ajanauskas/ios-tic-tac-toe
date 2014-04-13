@@ -10,7 +10,7 @@
 #import "Match.h"
 #import "MenuViewController.h"
 
-@interface GameViewController : UIViewController
+@interface GameViewController : UIViewController <UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton* surrenderButton;
 
