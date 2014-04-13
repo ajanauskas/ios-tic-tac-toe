@@ -19,6 +19,7 @@ static const int kBoardSize = 9;
 @property (strong, nonatomic) NSMutableArray* cells;
 
 - (BOOL)canMarkCellAt:(NSInteger)index;
+- (BOOL)isWinner:(NSInteger)player;
 - (NSInteger)getCellAt:(NSInteger)index;
 - (void)markPlayerCellAt:(NSInteger)index;
 - (void)markAICellAt:(NSInteger)index;

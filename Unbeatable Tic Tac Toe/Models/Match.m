@@ -19,6 +19,8 @@
 @synthesize board = _board;
 @synthesize playerStarts = _playerStarts;
 
+#pragma private implementation
+
 - (void)makeAIMovement
 {
     if ([self.board emptyCells] > 0) {
@@ -32,7 +34,9 @@
     }
 }
 
-- (Match*)init
+#pragma public impementation
+
+- (id)init
 {
     self = [super init];
     
@@ -44,7 +48,7 @@
     return self;
 }
 
-- (Match*)initWithPlayerStarts:(BOOL)playerStarts
+- (id)initWithPlayerStarts:(BOOL)playerStarts
 {
     self = [self init];
     
@@ -74,7 +78,7 @@
 
 - (NSInteger)getMatchStatus
 {
-    if ([self.board emptyCells] > 0) {
+    if ([self.board emptyCells] > 0 && ![self.board isWinner:kPlayer] && ![self.board isWinner:kAI]) {
         return kInProgress;
     }
     else {

@@ -18,7 +18,6 @@
 		09955E0B18F5C11300AAF482 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09955DE718F5C11200AAF482 /* Foundation.framework */; };
 		09955E0C18F5C11300AAF482 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09955DEB18F5C11200AAF482 /* UIKit.framework */; };
 		09955E1418F5C11300AAF482 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09955E1218F5C11300AAF482 /* InfoPlist.strings */; };
-		09955E1618F5C11300AAF482 /* Unbeatable_Tic_Tac_ToeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09955E1518F5C11300AAF482 /* Unbeatable_Tic_Tac_ToeTests.m */; };
 		09C7E57E18F9871300BA4F64 /* circle256.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C7E57A18F9871300BA4F64 /* circle256.png */; };
 		09C7E58018F9871300BA4F64 /* cross256.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C7E57C18F9871300BA4F64 /* cross256.png */; };
 		09C7E58B18F989F300BA4F64 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C7E58818F989F300BA4F64 /* GameViewController.m */; };
@@ -28,6 +27,7 @@
 		09CBCB2F18FAB602005E2EE7 /* Menu_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CBCB2C18FAB602005E2EE7 /* Menu_iPhone.storyboard */; };
 		09CBCB3C18FAB877005E2EE7 /* Match.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CBCB3B18FAB877005E2EE7 /* Match.m */; };
 		09CBCB3F18FAEF80005E2EE7 /* TicTacToeAI.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CBCB3E18FAEF80005E2EE7 /* TicTacToeAI.m */; };
+		09CBCB4218FB0549005E2EE7 /* MatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CBCB4118FB0549005E2EE7 /* MatchTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,6 @@
 		09955E0918F5C11300AAF482 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		09955E1118F5C11300AAF482 /* Unbeatable Tic Tac ToeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unbeatable Tic Tac ToeTests-Info.plist"; sourceTree = "<group>"; };
 		09955E1318F5C11300AAF482 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		09955E1518F5C11300AAF482 /* Unbeatable_Tic_Tac_ToeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Unbeatable_Tic_Tac_ToeTests.m; sourceTree = "<group>"; };
 		09C7E57A18F9871300BA4F64 /* circle256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle256.png; sourceTree = "<group>"; };
 		09C7E57C18F9871300BA4F64 /* cross256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross256.png; sourceTree = "<group>"; };
 		09C7E58718F989F300BA4F64 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		09CBCB3B18FAB877005E2EE7 /* Match.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Match.m; sourceTree = "<group>"; };
 		09CBCB3D18FAEF80005E2EE7 /* TicTacToeAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicTacToeAI.h; sourceTree = "<group>"; };
 		09CBCB3E18FAEF80005E2EE7 /* TicTacToeAI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicTacToeAI.m; sourceTree = "<group>"; };
+		09CBCB4118FB0549005E2EE7 /* MatchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +162,7 @@
 		09955E0F18F5C11300AAF482 /* Unbeatable Tic Tac ToeTests */ = {
 			isa = PBXGroup;
 			children = (
-				09955E1518F5C11300AAF482 /* Unbeatable_Tic_Tac_ToeTests.m */,
+				09CBCB4018FB0529005E2EE7 /* Models */,
 				09955E1018F5C11300AAF482 /* Supporting Files */,
 			);
 			path = "Unbeatable Tic Tac ToeTests";
@@ -216,6 +216,14 @@
 				09C7E58A18F989F300BA4F64 /* MenuViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		09CBCB4018FB0529005E2EE7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				09CBCB4118FB0549005E2EE7 /* MatchTests.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		09D0AD7018F5C42D0021D3F4 /* Storyboards */ = {
@@ -342,7 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09955E1618F5C11300AAF482 /* Unbeatable_Tic_Tac_ToeTests.m in Sources */,
+				09CBCB4218FB0549005E2EE7 /* MatchTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

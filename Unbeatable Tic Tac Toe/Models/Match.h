@@ -19,7 +19,7 @@ static const NSInteger kEnded = 1;
 @property (strong, nonatomic) TicTacToeAI *AI;
 @property BOOL playerStarts;
 
-- (Match*)initWithPlayerStarts:(BOOL)playerStarts;
+- (id)initWithPlayerStarts:(BOOL)playerStarts;
 - (BOOL)makeMoveAtCell:(NSInteger)index;
 - (NSInteger)getMatchStatus;
 - (void)reset;
