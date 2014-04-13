@@ -24,12 +24,7 @@
     if ([self.board emptyCells] > 0) {
         for(NSInteger i = 0; i < kBoardSize; i++) {
             if ([self.board canMarkCellAt:i]) {
-                if (self.playerStarts) {
-                    [self.board markCellWithCircleAt:i];
-                }
-                else {
-                    [self.board markCellWithCrossAt:i];
-                }
+                [self.board markAICellAt:i];
                 
                 return;
             }
@@ -67,12 +62,7 @@
 - (BOOL)makeMoveAtCell:(NSInteger)index
 {
     if ([self.board canMarkCellAt:index]) {
-        if (self.playerStarts) {
-            [self.board markCellWithCrossAt:index];
-        }
-        else {
-            [self.board markCellWithCircleAt:index];
-        }
+        [self.board markPlayerCellAt:index];
         
         [self makeAIMovement];
         

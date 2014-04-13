@@ -27,6 +27,7 @@
 		09CBCB2E18FAB602005E2EE7 /* Game_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CBCB2A18FAB602005E2EE7 /* Game_iPhone.storyboard */; };
 		09CBCB2F18FAB602005E2EE7 /* Menu_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CBCB2C18FAB602005E2EE7 /* Menu_iPhone.storyboard */; };
 		09CBCB3C18FAB877005E2EE7 /* Match.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CBCB3B18FAB877005E2EE7 /* Match.m */; };
+		09CBCB3F18FAEF80005E2EE7 /* TicTacToeAI.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CBCB3E18FAEF80005E2EE7 /* TicTacToeAI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		09CBCB3918FAB65D005E2EE7 /* lt-LT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "lt-LT"; path = "lt-LT.lproj/Menu_iPhone.strings"; sourceTree = "<group>"; };
 		09CBCB3A18FAB877005E2EE7 /* Match.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Match.h; sourceTree = "<group>"; };
 		09CBCB3B18FAB877005E2EE7 /* Match.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Match.m; sourceTree = "<group>"; };
+		09CBCB3D18FAEF80005E2EE7 /* TicTacToeAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicTacToeAI.h; sourceTree = "<group>"; };
+		09CBCB3E18FAEF80005E2EE7 /* TicTacToeAI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicTacToeAI.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +201,8 @@
 				09C7E58E18F99E6600BA4F64 /* Board.m */,
 				09CBCB3A18FAB877005E2EE7 /* Match.h */,
 				09CBCB3B18FAB877005E2EE7 /* Match.m */,
+				09CBCB3D18FAEF80005E2EE7 /* TicTacToeAI.h */,
+				09CBCB3E18FAEF80005E2EE7 /* TicTacToeAI.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09CBCB3F18FAEF80005E2EE7 /* TicTacToeAI.m in Sources */,
 				09C7E58B18F989F300BA4F64 /* GameViewController.m in Sources */,
 				09C7E58C18F989F300BA4F64 /* MenuViewController.m in Sources */,
 				09955DF818F5C11200AAF482 /* AppDelegate.m in Sources */,

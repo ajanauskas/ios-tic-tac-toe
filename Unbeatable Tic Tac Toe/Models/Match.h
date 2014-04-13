@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Board.h"
+#import "TicTacToeAI.h"
 
 static const NSInteger kInProgress = 0;
 static const NSInteger kEnded = 1;
@@ -15,6 +16,7 @@ static const NSInteger kEnded = 1;
 @interface Match : NSObject
 
 @property (strong, nonatomic) Board *board;
+@property (strong, nonatomic) TicTacToeAI *AI;
 @property BOOL playerStarts;
 
 - (Match*)initWithPlayerStarts:(BOOL)playerStarts;

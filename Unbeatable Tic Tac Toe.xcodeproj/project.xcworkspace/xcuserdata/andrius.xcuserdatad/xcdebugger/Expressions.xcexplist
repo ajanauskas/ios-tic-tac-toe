@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[Match makeMoveAtCell:]:Match.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self.board canMarkCellAt:index]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Board init]:Board.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Board getCellAt:]:Board.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(NSInteger)[self.cells objectAtIndex:index]">
+            </PersistentString>
+            <PersistentString
+               value = "[self.cells objectAtIndex:index]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[GameViewController redrawBoard]:GameViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self.match.board getCellAt:tag -1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Match initWithPlayerStarts:]:Match.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

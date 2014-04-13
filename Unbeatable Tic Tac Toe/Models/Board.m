@@ -19,41 +19,36 @@
     if (self) {
         self.cells = [NSMutableArray array];
         
-        for (int i = 0; i < kBoardSize; i++) {
-            [self.cells addObject:[NSNumber numberWithInt:kEmpty]];
+        for (NSInteger i = 0; i < kBoardSize; i++) {
+            [self.cells addObject:[NSNumber numberWithInteger:kEmpty]];
         }
     }
 
     return self;
 }
 
+- (NSInteger)getCellAt:(NSInteger)index
+{
+    NSNumber *cell = [self.cells objectAtIndex:index];
+    return [cell integerValue];
+}
 
 - (BOOL)canMarkCellAt:(NSInteger)index
 {
-    return [[self.cells objectAtIndex:index] isEqualToNumber:[NSNumber numberWithInt:kEmpty]];
+    return [[self.cells objectAtIndex:index] isEqualToNumber:[NSNumber numberWithInteger:kEmpty]];
 }
 
-- (BOOL)isCellFilledByCrossAt:(NSInteger)index
-{
-    return [[self.cells objectAtIndex:index] isEqualToNumber:[NSNumber numberWithInt:kCross]];
-}
-
-- (BOOL)isCellFilledByCircleAt:(NSInteger)index
-{
-    return [[self.cells objectAtIndex:index] isEqualToNumber:[NSNumber numberWithInt:kCircle]];
-}
-
-- (void)markCellWithCrossAt:(NSInteger)index
+- (void)markPlayerCellAt:(NSInteger)index
 {
     if ([self canMarkCellAt:index]) {
-        [self.cells replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:kCross]];
+        [self.cells replaceObjectAtIndex:index withObject:[NSNumber numberWithInteger:kPlayer]];
     }
 }
 
-- (void)markCellWithCircleAt:(NSInteger)index
+- (void)markAICellAt:(NSInteger)index
 {
     if ([self canMarkCellAt:index]) {
-        [self.cells replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:kCircle]];
+        [self.cells replaceObjectAtIndex:index withObject:[NSNumber numberWithInteger:kAI]];
     }
 }
 
@@ -73,7 +68,7 @@
 - (void)reset
 {
     for (NSInteger i = 0; i < kBoardSize; i++) {
-        [self.cells replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:kEmpty]];
+        [self.cells replaceObjectAtIndex:i withObject:[NSNumber numberWithInteger:kEmpty]];
     }
 }
 

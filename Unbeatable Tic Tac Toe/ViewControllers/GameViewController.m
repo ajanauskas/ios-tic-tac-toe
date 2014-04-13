@@ -41,12 +41,26 @@
         NSInteger tag = (NSInteger)i;
         UIButton *button = (UIButton *)[self.view viewWithTag:tag];
         
-        if ([self.match.board isCellFilledByCircleAt:tag - 1]) {
-            [button setImage:imageOfCircle forState:UIControlStateNormal];
-        } else if ([self.match.board isCellFilledByCrossAt:tag - 1]) {
-            [button setImage:imageOfCross forState:UIControlStateNormal];
-        } else {
-            [button setImage:nil forState:UIControlStateNormal];
+        switch ([self.match.board getCellAt:tag - 1]) {
+            case kPlayer:
+                if (self.match.playerStarts) {
+                    [button setImage:imageOfCross forState:UIControlStateNormal];
+                }
+                else {
+                    [button setImage:imageOfCircle forState:UIControlStateNormal];
+                }
+                break;
+            case kAI:
+                if (self.match.playerStarts) {
+                    [button setImage:imageOfCircle forState:UIControlStateNormal];
+                }
+                else {
+                    [button setImage:imageOfCross forState:UIControlStateNormal];
+                }
+                break;
+            default:
+                [button setImage:nil forState:UIControlStateNormal];
+                break;
         }
     }
 }
