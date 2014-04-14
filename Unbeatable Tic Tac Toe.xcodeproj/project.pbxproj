@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091CB16718FBD42B007E2E4E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 091CB16918FBD42B007E2E4E /* Localizable.strings */; };
 		09955DE818F5C11200AAF482 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09955DE718F5C11200AAF482 /* Foundation.framework */; };
 		09955DEA18F5C11200AAF482 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09955DE918F5C11200AAF482 /* CoreGraphics.framework */; };
 		09955DEC18F5C11200AAF482 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09955DEB18F5C11200AAF482 /* UIKit.framework */; };
@@ -41,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		091CB16818FBD42B007E2E4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		091CB16A18FBD42E007E2E4E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		091CB16B18FBD42F007E2E4E /* lt-LT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "lt-LT"; path = "lt-LT.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		09955DE418F5C11200AAF482 /* Unbeatable Tic Tac Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unbeatable Tic Tac Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09955DE718F5C11200AAF482 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		09955DE918F5C11200AAF482 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -155,6 +159,7 @@
 				09955DF018F5C11200AAF482 /* InfoPlist.strings */,
 				09955DF318F5C11200AAF482 /* main.m */,
 				09955DF518F5C11200AAF482 /* Unbeatable Tic Tac Toe-Prefix.pch */,
+				091CB16918FBD42B007E2E4E /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				09C7E57E18F9871300BA4F64 /* circle256.png in Resources */,
 				09955E0318F5C11200AAF482 /* Images.xcassets in Resources */,
 				09CBCB2E18FAB602005E2EE7 /* Game_iPhone.storyboard in Resources */,
+				091CB16718FBD42B007E2E4E /* Localizable.strings in Resources */,
 				09955DF218F5C11200AAF482 /* InfoPlist.strings in Resources */,
 				09CBCB2F18FAB602005E2EE7 /* Menu_iPhone.storyboard in Resources */,
 				09C7E58018F9871300BA4F64 /* cross256.png in Resources */,
@@ -365,6 +371,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		091CB16918FBD42B007E2E4E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				091CB16818FBD42B007E2E4E /* Base */,
+				091CB16A18FBD42E007E2E4E /* en */,
+				091CB16B18FBD42F007E2E4E /* lt-LT */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		09955DF018F5C11200AAF482 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

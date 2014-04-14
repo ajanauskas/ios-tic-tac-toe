@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Unbeatable Tic Tac Toe
+
+  Created by Andrius Janauskas on 14/04/14.
+  Copyright (c) 2014 Andrius Janauskas. All rights reserved.
+*/
+
+
+"game_alert_title" = "Game ended!";
+"game_alert_message" = "Want to go for another round?";
+"game_alert_cancel_button" = "No thanks";
+"game_alert_continue_button" = "For sure!";
