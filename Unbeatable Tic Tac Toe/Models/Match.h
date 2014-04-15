@@ -16,7 +16,6 @@ static const NSInteger kEnded = 1;
 @interface Match : NSObject
 
 @property (strong, nonatomic) Board *board;
-@property (strong, nonatomic) TicTacToeAI *AI;
 @property BOOL playerStarts;
 
 - (id)initWithPlayerStarts:(BOOL)playerStarts;

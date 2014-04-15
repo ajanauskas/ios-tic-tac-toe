@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "Board.h"
 
+static const NSInteger kMoveImpossible = -1;
+
 @interface TicTacToeAI : NSObject
 
 @property (strong, nonatomic) Board *board;
 
--(id)initWithBoard:(Board*)board;
+- (id)initWithBoard:(Board*)board;
+- (NSInteger)getMove;
 
 @end

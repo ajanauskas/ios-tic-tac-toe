@@ -81,21 +81,21 @@
 
 - (BOOL)canMarkCellAt:(NSInteger)index
 {
-    return [[self.cells objectAtIndex:index] isEqualToNumber:[NSNumber numberWithInteger:kEmpty]];
+    return [[self.cells objectAtIndex:index] isEqualToNumber:@(kEmpty)];
 }
 
 
 - (void)markPlayerCellAt:(NSInteger)index
 {
     if ([self canMarkCellAt:index]) {
-        [self.cells replaceObjectAtIndex:index withObject:[NSNumber numberWithInteger:kPlayer]];
+        [self.cells replaceObjectAtIndex:index withObject:@(kPlayer)];
     }
 }
 
 - (void)markAICellAt:(NSInteger)index
 {
     if ([self canMarkCellAt:index]) {
-        [self.cells replaceObjectAtIndex:index withObject:[NSNumber numberWithInteger:kAI]];
+        [self.cells replaceObjectAtIndex:index withObject:@(kAI)];
     }
 }
 
@@ -115,8 +115,18 @@
 - (void)reset
 {
     for (NSInteger i = 0; i < kBoardSize; i++) {
-        [self.cells replaceObjectAtIndex:i withObject:[NSNumber numberWithInteger:kEmpty]];
+        [self.cells replaceObjectAtIndex:i withObject:@(kEmpty)];
     }
+}
+
+# pragma NSCopying implementation
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    Board *copy = [[Board allocWithZone:zone] init];
+    copy.cells = [self.cells mutableCopyWithZone:zone];
+    
+    return copy;
 }
 
 @end

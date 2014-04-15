@@ -14,7 +14,7 @@ static const NSInteger kAI = 2;
 
 static const int kBoardSize = 9;
 
-@interface Board : NSObject
+@interface Board : NSObject <NSCopying>
 
 @property (strong, nonatomic) NSMutableArray* cells;
 

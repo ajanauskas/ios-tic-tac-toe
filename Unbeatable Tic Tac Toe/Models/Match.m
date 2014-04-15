@@ -10,6 +10,8 @@
 
 @interface Match()
 
+@property (strong, nonatomic) TicTacToeAI *AI;
+
 - (void)makeAIMovement;
 
 @end
@@ -18,19 +20,16 @@
 
 @synthesize board = _board;
 @synthesize playerStarts = _playerStarts;
+@synthesize AI=_ai;
 
 #pragma private implementation
 
 - (void)makeAIMovement
 {
-    if ([self.board emptyCells] > 0) {
-        for(NSInteger i = 0; i < kBoardSize; i++) {
-            if ([self.board canMarkCellAt:i]) {
-                [self.board markAICellAt:i];
-                
-                return;
-            }
-        }
+    NSInteger aiMovesAt = [self.AI getMove];
+    
+    if (aiMovesAt != kMoveImpossible) {
+        [self.board markAICellAt:aiMovesAt];
     }
 }
 
@@ -43,6 +42,7 @@
     if (self) {
         self.playerStarts = NO;
         self.board = [[Board alloc] init];
+        self.AI = [[TicTacToeAI alloc] initWithBoard:self.board];
     }
     
     return self;
@@ -68,7 +68,9 @@
     if ([self.board canMarkCellAt:index]) {
         [self.board markPlayerCellAt:index];
         
-        [self makeAIMovement];
+        if (![self.board isWinner:kPlayer]) {
+            [self makeAIMovement];
+        }
         
         return YES;
     }

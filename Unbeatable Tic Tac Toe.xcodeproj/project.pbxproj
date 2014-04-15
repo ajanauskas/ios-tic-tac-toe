@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		091CB16718FBD42B007E2E4E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 091CB16918FBD42B007E2E4E /* Localizable.strings */; };
+		097B6E1118FC67D70018F1E1 /* TicTacToeAITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 097B6E1018FC67D70018F1E1 /* TicTacToeAITests.m */; };
 		09955DE818F5C11200AAF482 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09955DE718F5C11200AAF482 /* Foundation.framework */; };
 		09955DEA18F5C11200AAF482 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09955DE918F5C11200AAF482 /* CoreGraphics.framework */; };
 		09955DEC18F5C11200AAF482 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09955DEB18F5C11200AAF482 /* UIKit.framework */; };
@@ -45,6 +46,7 @@
 		091CB16818FBD42B007E2E4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		091CB16A18FBD42E007E2E4E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		091CB16B18FBD42F007E2E4E /* lt-LT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "lt-LT"; path = "lt-LT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		097B6E1018FC67D70018F1E1 /* TicTacToeAITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicTacToeAITests.m; sourceTree = "<group>"; };
 		09955DE418F5C11200AAF482 /* Unbeatable Tic Tac Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unbeatable Tic Tac Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09955DE718F5C11200AAF482 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		09955DE918F5C11200AAF482 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				09CBCB4118FB0549005E2EE7 /* MatchTests.m */,
+				097B6E1018FC67D70018F1E1 /* TicTacToeAITests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				097B6E1118FC67D70018F1E1 /* TicTacToeAITests.m in Sources */,
 				09CBCB4218FB0549005E2EE7 /* MatchTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
