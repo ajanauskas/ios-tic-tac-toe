@@ -6,7 +6,9 @@
   Copyright (c) 2014 Andrius Janauskas. All rights reserved.
 */
 
-"game_alert_title" = "Žaidimas pasibaigė!";
+"game_alert_title_draw" = "Lygiosios!";
 "game_alert_message" = "Nori sužaist dar kartą?";
 "game_alert_cancel_button" = "Ne, dėkui";
 "game_alert_continue_button" = "Žinoma!";
+"game_alert_change_roles_to_player" = "Taip, bet eisiu pirmas";
+"game_alert_change_roles_to_iphone" = "Taip, bet neesiu pirmas";

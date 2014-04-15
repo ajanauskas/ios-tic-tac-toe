@@ -83,16 +83,31 @@
     [self redrawBoard];
     
     if ([self.match getMatchStatus] == kEnded) {
-        NSString *alertTitle = NSLocalizedString(@"game_alert_title", nil);
-        NSString *alertMessage = NSLocalizedString(@"game_alert_message", nil);
+        NSString *alertTitle;
+        NSString *changeWhoStartsButton;
         NSString *alertCancelButton = NSLocalizedString(@"game_alert_cancel_button", nil);
         NSString *alertContinueButton = NSLocalizedString(@"game_alert_continue_button", nil);
+        NSString *alertMessage = NSLocalizedString(@"game_alert_message", nil);
+        
+        if (self.playerStarts) {
+            changeWhoStartsButton = NSLocalizedString(@"game_alert_change_roles_to_iphone", nil);
+        }
+        else {
+            changeWhoStartsButton = NSLocalizedString(@"game_alert_change_roles_to_player", nil);
+        }
+        
+        if ([self.match.board isWinner:kAI]) {
+            alertTitle = NSLocalizedString(@"game_alert_title_ai_won", nil);
+        }
+        else {
+            alertTitle = NSLocalizedString(@"game_alert_title_draw", nil);
+        }
         
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:alertTitle
                                                             message:alertMessage
                                                            delegate:self
                                                   cancelButtonTitle:alertCancelButton
-                                                  otherButtonTitles:alertContinueButton, nil];
+                                                  otherButtonTitles:alertContinueButton, changeWhoStartsButton, nil];
         
         [alertView show];
     }
@@ -106,7 +121,14 @@
         // clicked cancel
         [self dismissViewControllerAnimated:YES completion:nil];
     }
-    else {
+    else if (buttonIndex == 1) {
+        // clicked new match
+        [self.match reset];
+        [self redrawBoard];
+    } else {
+        // wants to change sides
+        self.playerStarts = !self.playerStarts;
+        self.match.playerStarts = self.playerStarts;
         [self.match reset];
         [self redrawBoard];
     }

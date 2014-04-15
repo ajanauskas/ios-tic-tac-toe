@@ -7,7 +7,10 @@
 */
 
 
-"game_alert_title" = "Game ended!";
+"game_alert_title_draw" = "Game ended in draw!";
+"game_alert_title_ai_won" = "Looks like iPhone won!";
 "game_alert_message" = "Want to go for another round?";
 "game_alert_cancel_button" = "No thanks";
 "game_alert_continue_button" = "For sure!";
+"game_alert_change_roles_to_player" = "Sure, but I go first";
+"game_alert_change_roles_to_iphone" = "Sure, but iPhone goes first";

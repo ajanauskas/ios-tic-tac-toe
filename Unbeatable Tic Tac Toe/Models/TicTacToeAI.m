@@ -91,6 +91,11 @@
         }
     }
     
+    // Try to take center if its first move
+    if ([self.board canMarkCellAt:4] && [self.board emptyCells] == 9) {
+        return 4;
+    }
+    
     // Try to take one of the corners, if they are free.
     NSArray *corners = [NSArray arrayWithObjects:@0, @2, @6, @8, nil];
     NSInteger move = [self chooseRandomMoveFromList:corners];
@@ -99,11 +104,10 @@
         return move;
     }
     
-    // Try to take center
     if ([self.board canMarkCellAt:4]) {
         return 4;
     }
-    
+   
     // take sides
     NSArray *sides = [NSArray arrayWithObjects:@1, @3, @5, @7, nil];
     return [self chooseRandomMoveFromList:sides];
