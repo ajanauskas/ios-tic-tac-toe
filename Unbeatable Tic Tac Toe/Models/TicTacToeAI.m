@@ -12,6 +12,8 @@
 
 - (NSInteger)chooseRandomMoveFromList:(NSArray*)list;
 - (NSInteger)getRandomNumberBetween:(int)from to:(int)to;
+- (NSInteger)getBlockMove;
+- (NSInteger)getWinMove;
 
 @end
 
@@ -45,6 +47,40 @@
     return (int)from + arc4random() % (to-from+1);
 }
 
+- (NSInteger)getBlockMove
+{
+    for (NSInteger i = 0; i < kBoardSize; i++) {
+        Board *boardCopy = [self.board copy];
+        
+        if ([boardCopy canMarkCellAt:i]) {
+            [boardCopy markPlayerCellAt:i];
+            
+            if ([boardCopy isWinner:kPlayer]) {
+                return i;
+            }
+        }
+    }
+    
+    return kMoveImpossible;
+}
+
+- (NSInteger)getWinMove
+{
+    for (NSInteger i = 0; i < kBoardSize; i++) {
+        Board *boardCopy = [self.board copy];
+        
+        if ([boardCopy canMarkCellAt:i]) {
+            [boardCopy markAICellAt:i];
+            
+            if ([boardCopy isWinner:kAI]) {
+                return i;
+            }
+        }
+    }
+    
+    return kMoveImpossible;
+}
+
 # pragma public implementation
 
 - (id)initWithBoard:(Board *)board
@@ -60,37 +96,20 @@
 
 - (NSInteger)getMove
 {
-    // Here is our algorithm for our Tic Tac Toe AI:
+    NSInteger move;
     // First, check if we can win in the next move
-    for (NSInteger i = 0; i < kBoardSize; i++) {
-        @autoreleasepool {
-            Board *boardCopy = [self.board copy];
-            
-            if ([boardCopy canMarkCellAt:i]) {
-                [boardCopy markAICellAt:i];
-                
-                if ([boardCopy isWinner:kAI]) {
-                    return i;
-                }
-            }
-        }
-    }
-
-    // Check if the player could win on his next move, and block them.
-    for (NSInteger i = 0; i < kBoardSize; i++) {
-        @autoreleasepool {
-            Board *boardCopy = [self.board copy];
-            
-            if ([boardCopy canMarkCellAt:i]) {
-                [boardCopy markPlayerCellAt:i];
-                
-                if ([boardCopy isWinner:kPlayer]) {
-                    return i;
-                }
-            }
-        }
+    move = [self getWinMove];
+    
+    if (move != kMoveImpossible) {
+        return move;
     }
     
+    // Check if the player could win on his next move, and block them.
+    move = [self getBlockMove];
+    if (move != kMoveImpossible) {
+        return move;
+    }
+   
     // Try to take center if its first move
     if ([self.board canMarkCellAt:4] && [self.board emptyCells] == 9) {
         return 4;
@@ -98,7 +117,7 @@
     
     // Try to take one of the corners, if they are free.
     NSArray *corners = [NSArray arrayWithObjects:@0, @2, @6, @8, nil];
-    NSInteger move = [self chooseRandomMoveFromList:corners];
+    move = [self chooseRandomMoveFromList:corners];
     
     if (move != kMoveImpossible) {
         return move;
