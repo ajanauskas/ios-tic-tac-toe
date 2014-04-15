@@ -14,6 +14,9 @@
 - (NSInteger)getRandomNumberBetween:(int)from to:(int)to;
 - (NSInteger)getBlockMove;
 - (NSInteger)getWinMove;
+- (NSInteger)createFork;
+- (NSInteger)blockFork;
+- (NSInteger)shouldTakeOppositeCorner;
 
 @end
 
@@ -81,6 +84,57 @@
     return kMoveImpossible;
 }
 
+- (NSInteger)createFork
+{
+    for (NSInteger i = 0; i < kBoardSize; i++) {
+        Board *boardCopy = [self.board copy];
+        
+        if ([boardCopy canMarkCellAt:i]) {
+            [boardCopy markAICellAt:i];
+            
+            if ([boardCopy isForkedBy:kAI]) {
+                return i;
+            }
+        }
+    }
+    
+    return kMoveImpossible;
+}
+
+- (NSInteger)blockFork
+{
+    for (NSInteger i = 0; i < kBoardSize; i++) {
+        Board *boardCopy = [self.board copy];
+        
+        if ([boardCopy canMarkCellAt:i]) {
+            [boardCopy markPlayerCellAt:i];
+            
+            if ([boardCopy isForkedBy:kPlayer]) {
+                return i;
+            }
+        }
+    }
+    
+    return kMoveImpossible;   
+}
+
+- (NSInteger)shouldTakeOppositeCorner
+{
+    if ([self.board emptyCells] == 8) {
+        if (![self.board canMarkCellAt:0]) {
+            return 8;
+        } else if (![self.board canMarkCellAt:2]) {
+            return 6;
+        } else if (![self.board canMarkCellAt:6]) {
+            return 2;
+        } else if (![self.board canMarkCellAt:8]) {
+            return 0;
+        }
+    }
+    
+    return kMoveImpossible;
+}
+
 # pragma public implementation
 
 - (id)initWithBoard:(Board *)board
@@ -93,6 +147,27 @@
     
     return self;
 }
+
+/*
+ The following algorithm will allow you (or the AI) to always deny your opponent victory:
+ 
+ Win:
+ If you have two in a row, you can place a third to get three in a row.
+ Block:
+ If the opponent has two in a row, you must play the third to block the opponent.
+ Fork:
+ Create an opportunity where you have two threats to win (two non-blocked lines of 2).
+ Blocking an opponent's fork:
+ If there is a configuration where the opponent can fork, you must block that fork.
+ Center:
+ You play the center if open.
+ Opposite corner:
+ If the opponent is in the corner, you play the opposite corner.
+ Empty corner:
+ You play in a corner square.
+ Empty side:
+ You play in a middle square on any of the 4 sides.
+ */
 
 - (NSInteger)getMove
 {
@@ -109,10 +184,28 @@
     if (move != kMoveImpossible) {
         return move;
     }
-   
-    // Try to take center if its first move
-    if ([self.board canMarkCellAt:4] && [self.board emptyCells] == 9) {
+    
+    // Fork - situation where we have 2 threats
+    // Check if we can create fork for player
+    move = [self createFork];
+    if (move != kMoveImpossible) {
+        return move;
+    }
+    
+    // Can we prevent fork?
+    move = [self blockFork];
+    if (move != kMoveImpossible) {
+        return move;
+    }
+    
+    // try taking center
+    if ([self.board canMarkCellAt:4]) {
         return 4;
+    }
+   
+    move = [self shouldTakeOppositeCorner];
+    if (move != kMoveImpossible) {
+        return move;
     }
     
     // Try to take one of the corners, if they are free.
@@ -122,11 +215,7 @@
     if (move != kMoveImpossible) {
         return move;
     }
-    
-    if ([self.board canMarkCellAt:4]) {
-        return 4;
-    }
-   
+  
     // take sides
     NSArray *sides = [NSArray arrayWithObjects:@1, @3, @5, @7, nil];
     return [self chooseRandomMoveFromList:sides];

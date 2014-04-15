@@ -20,6 +20,7 @@ static const int kBoardSize = 9;
 
 - (BOOL)canMarkCellAt:(NSInteger)index;
 - (BOOL)isWinner:(NSInteger)player;
+- (BOOL)isForkedBy:(NSInteger)player;
 - (NSInteger)getCellAt:(NSInteger)index;
 - (void)markPlayerCellAt:(NSInteger)index;
 - (void)markAICellAt:(NSInteger)index;

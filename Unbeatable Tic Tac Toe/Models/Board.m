@@ -84,6 +84,28 @@
     return [[self.cells objectAtIndex:index] isEqualToNumber:@(kEmpty)];
 }
 
+- (BOOL)isForkedBy:(NSInteger)player
+{
+    NSInteger threats = 0;
+    
+    for (NSInteger i = 0; i < kBoardSize; i++) {
+        Board *boardCopy = [self copy];
+        
+        if ([boardCopy canMarkCellAt:i]) {
+            if (player == kPlayer) {
+                [boardCopy markPlayerCellAt:i];
+            } else {
+                [boardCopy markAICellAt:i];
+            }
+            
+            if ([boardCopy isWinner:player]) {
+                threats += 1;
+            }
+        }
+    }
+    
+    return threats > 1;
+}
 
 - (void)markPlayerCellAt:(NSInteger)index
 {
