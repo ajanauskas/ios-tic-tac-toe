@@ -99,6 +99,9 @@
         if ([self.match.board isWinner:kAI]) {
             alertTitle = NSLocalizedString(@"game_alert_title_ai_won", nil);
         }
+        else if ([self.match.board isWinner:kPlayer]) {
+            alertTitle = NSLocalizedString(@"game_alert_title_player_won", nil);
+        }
         else {
             alertTitle = NSLocalizedString(@"game_alert_title_draw", nil);
         }

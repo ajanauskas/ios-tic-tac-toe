@@ -7,6 +7,8 @@
 */
 
 "game_alert_title_draw" = "Lygiosios!";
+"game_alert_title_player_won" = "Tu nugalėjai!";
+"game_alert_title_ai_won" = "Tu pralaimėjai.";
 "game_alert_message" = "Nori sužaist dar kartą?";
 "game_alert_cancel_button" = "Ne, dėkui";
 "game_alert_continue_button" = "Žinoma!";
