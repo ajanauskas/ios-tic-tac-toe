@@ -14,8 +14,6 @@
 
 @implementation MenuViewController
 
-@synthesize startGameButton = _startGameButton;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -29,9 +27,12 @@
 
 #pragma events
 
-- (IBAction)handleStartGameButtonClick:(id)sender
+- (IBAction)didClickStartButton:(id)sender
 {
-    GameViewController *gameViewController = [GameViewController instantiate];
+    BOOL playerStarts = [sender tag] == 2;
+    
+    GameViewController *gameViewController = [GameViewController instantiateWithPlayerStarts:playerStarts];
+    
     [self presentViewController:gameViewController animated:YES completion:nil];
 }
 

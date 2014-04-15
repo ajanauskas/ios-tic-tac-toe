@@ -15,8 +15,9 @@
 @property (weak, nonatomic) IBOutlet UIButton* surrenderButton;
 
 @property (strong, nonatomic) Match *match;
+@property BOOL playerStarts;
 
-+ (GameViewController *)instantiate;
++ (GameViewController *)instantiateWithPlayerStarts:(BOOL)playerStarts;
 
 - (void)redrawBoard;
 

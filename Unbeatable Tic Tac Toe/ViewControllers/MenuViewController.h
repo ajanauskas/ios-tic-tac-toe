@@ -11,8 +11,6 @@
 
 @interface MenuViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *startGameButton;
-
-- (IBAction)handleStartGameButtonClick:(id)sender;
+- (IBAction)didClickStartButton:(id)sender;
 
 @end

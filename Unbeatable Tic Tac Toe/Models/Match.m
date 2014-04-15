@@ -91,6 +91,10 @@
 - (void)reset
 {
     [self.board reset];
+    
+    if (!self.playerStarts) {
+        [self makeAIMovement];
+    }
 }
 
 @end

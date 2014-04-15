@@ -16,25 +16,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrz-Fq-HPv">
-                                <rect key="frame" x="20" y="269" width="280" height="30"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1nk-Ez-2NV">
+                                <rect key="frame" x="20" y="244" width="280" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start the game">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="handleStartGameButtonClick:" destination="s5K-y8-Sj2" eventType="touchUpInside" id="j2F-gj-ZjS"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrz-Fq-HPv">
+                                        <rect key="frame" x="0.0" y="7" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Let iPhone start">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didClickStartButton:" destination="s5K-y8-Sj2" eventType="touchUpInside" id="LGJ-69-vcW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTW-uX-6mp">
+                                        <rect key="frame" x="0.0" y="50" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Let me start">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didClickStartButton:" destination="s5K-y8-Sj2" eventType="touchUpInside" id="rS2-Ua-QG8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="Yrz-Fq-HPv" secondAttribute="centerY" id="gW0-ft-z0x"/>
+                            <constraint firstAttribute="centerY" secondItem="1nk-Ez-2NV" secondAttribute="centerY" id="Nh1-uE-rQb"/>
+                            <constraint firstAttribute="centerX" secondItem="1nk-Ez-2NV" secondAttribute="centerX" id="SKC-a6-br5"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="startGameButton" destination="Yrz-Fq-HPv" id="FuD-T3-1Qz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNH-QW-7Yx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

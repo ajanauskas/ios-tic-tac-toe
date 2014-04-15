@@ -11,13 +11,15 @@
 @implementation GameViewController
 
 @synthesize match = _match;
+@synthesize playerStarts = _playerStarts;
 
-+ (GameViewController *)instantiate
++ (GameViewController *)instantiateWithPlayerStarts:(BOOL)playerStarts
 {
     NSString *storyboardName = @"Game_iPhone";
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
     GameViewController *gameViewController = [storyboard instantiateViewControllerWithIdentifier:@"GameViewController"];
-                                              
+    gameViewController.playerStarts = playerStarts;
+    
     return gameViewController;
 }
 
@@ -25,7 +27,7 @@
 {
     [super viewDidLoad];
     
-    self.match = [[Match alloc] initWithPlayerStarts:YES];
+    self.match = [[Match alloc] initWithPlayerStarts:self.playerStarts];
     
     [self redrawBoard];
 }
