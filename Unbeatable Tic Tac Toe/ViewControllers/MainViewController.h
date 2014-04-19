@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GameViewController.h"
 
-@interface MenuViewController : UIViewController
+@interface MainViewController : UIViewController
 
 - (IBAction)didClickStartButton:(id)sender;
 

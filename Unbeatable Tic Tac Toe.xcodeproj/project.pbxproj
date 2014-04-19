@@ -23,10 +23,9 @@
 		09C7E57E18F9871300BA4F64 /* circle256.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C7E57A18F9871300BA4F64 /* circle256.png */; };
 		09C7E58018F9871300BA4F64 /* cross256.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C7E57C18F9871300BA4F64 /* cross256.png */; };
 		09C7E58B18F989F300BA4F64 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C7E58818F989F300BA4F64 /* GameViewController.m */; };
-		09C7E58C18F989F300BA4F64 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C7E58A18F989F300BA4F64 /* MenuViewController.m */; };
+		09C7E58C18F989F300BA4F64 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C7E58A18F989F300BA4F64 /* MainViewController.m */; };
 		09C7E58F18F99E6600BA4F64 /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C7E58E18F99E6600BA4F64 /* Board.m */; };
-		09CBCB2E18FAB602005E2EE7 /* Game_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CBCB2A18FAB602005E2EE7 /* Game_iPhone.storyboard */; };
-		09CBCB2F18FAB602005E2EE7 /* Menu_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CBCB2C18FAB602005E2EE7 /* Menu_iPhone.storyboard */; };
+		09CBCB2F18FAB602005E2EE7 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CBCB2C18FAB602005E2EE7 /* Main_iPhone.storyboard */; };
 		09CBCB3C18FAB877005E2EE7 /* Match.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CBCB3B18FAB877005E2EE7 /* Match.m */; };
 		09CBCB3F18FAEF80005E2EE7 /* TicTacToeAI.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CBCB3E18FAEF80005E2EE7 /* TicTacToeAI.m */; };
 		09CBCB4218FB0549005E2EE7 /* MatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CBCB4118FB0549005E2EE7 /* MatchTests.m */; };
@@ -66,18 +65,15 @@
 		09C7E57C18F9871300BA4F64 /* cross256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross256.png; sourceTree = "<group>"; };
 		09C7E58718F989F300BA4F64 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		09C7E58818F989F300BA4F64 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
-		09C7E58918F989F300BA4F64 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		09C7E58A18F989F300BA4F64 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		09C7E58918F989F300BA4F64 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		09C7E58A18F989F300BA4F64 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		09C7E58D18F99E6600BA4F64 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
 		09C7E58E18F99E6600BA4F64 /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
 		09CBCB1718FAB189005E2EE7 /* lt-LT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "lt-LT"; path = "lt-LT.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		09CBCB1818FAB189005E2EE7 /* lt-LT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "lt-LT"; path = "lt-LT.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		09CBCB3018FAB643005E2EE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Game_iPhone.storyboard; sourceTree = "<group>"; };
-		09CBCB3118FAB643005E2EE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Menu_iPhone.storyboard; sourceTree = "<group>"; };
-		09CBCB3318FAB657005E2EE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Game_iPhone.strings; sourceTree = "<group>"; };
-		09CBCB3518FAB659005E2EE7 /* lt-LT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "lt-LT"; path = "lt-LT.lproj/Game_iPhone.strings"; sourceTree = "<group>"; };
-		09CBCB3718FAB65D005E2EE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Menu_iPhone.strings; sourceTree = "<group>"; };
-		09CBCB3918FAB65D005E2EE7 /* lt-LT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "lt-LT"; path = "lt-LT.lproj/Menu_iPhone.strings"; sourceTree = "<group>"; };
+		09CBCB3118FAB643005E2EE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		09CBCB3718FAB65D005E2EE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
+		09CBCB3918FAB65D005E2EE7 /* lt-LT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "lt-LT"; path = "lt-LT.lproj/Main_iPhone.strings"; sourceTree = "<group>"; };
 		09CBCB3A18FAB877005E2EE7 /* Match.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Match.h; sourceTree = "<group>"; };
 		09CBCB3B18FAB877005E2EE7 /* Match.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Match.m; sourceTree = "<group>"; };
 		09CBCB3D18FAEF80005E2EE7 /* TicTacToeAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicTacToeAI.h; sourceTree = "<group>"; };
@@ -219,8 +215,8 @@
 			children = (
 				09C7E58718F989F300BA4F64 /* GameViewController.h */,
 				09C7E58818F989F300BA4F64 /* GameViewController.m */,
-				09C7E58918F989F300BA4F64 /* MenuViewController.h */,
-				09C7E58A18F989F300BA4F64 /* MenuViewController.m */,
+				09C7E58918F989F300BA4F64 /* MainViewController.h */,
+				09C7E58A18F989F300BA4F64 /* MainViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -237,8 +233,7 @@
 		09D0AD7018F5C42D0021D3F4 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				09CBCB2A18FAB602005E2EE7 /* Game_iPhone.storyboard */,
-				09CBCB2C18FAB602005E2EE7 /* Menu_iPhone.storyboard */,
+				09CBCB2C18FAB602005E2EE7 /* Main_iPhone.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -322,10 +317,9 @@
 			files = (
 				09C7E57E18F9871300BA4F64 /* circle256.png in Resources */,
 				09955E0318F5C11200AAF482 /* Images.xcassets in Resources */,
-				09CBCB2E18FAB602005E2EE7 /* Game_iPhone.storyboard in Resources */,
 				091CB16718FBD42B007E2E4E /* Localizable.strings in Resources */,
 				09955DF218F5C11200AAF482 /* InfoPlist.strings in Resources */,
-				09CBCB2F18FAB602005E2EE7 /* Menu_iPhone.storyboard in Resources */,
+				09CBCB2F18FAB602005E2EE7 /* Main_iPhone.storyboard in Resources */,
 				09C7E58018F9871300BA4F64 /* cross256.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +341,7 @@
 			files = (
 				09CBCB3F18FAEF80005E2EE7 /* TicTacToeAI.m in Sources */,
 				09C7E58B18F989F300BA4F64 /* GameViewController.m in Sources */,
-				09C7E58C18F989F300BA4F64 /* MenuViewController.m in Sources */,
+				09C7E58C18F989F300BA4F64 /* MainViewController.m in Sources */,
 				09955DF818F5C11200AAF482 /* AppDelegate.m in Sources */,
 				09CBCB3C18FAB877005E2EE7 /* Match.m in Sources */,
 				09955DF418F5C11200AAF482 /* main.m in Sources */,
@@ -403,24 +397,14 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		09CBCB2A18FAB602005E2EE7 /* Game_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09CBCB3018FAB643005E2EE7 /* Base */,
-				09CBCB3318FAB657005E2EE7 /* en */,
-				09CBCB3518FAB659005E2EE7 /* lt-LT */,
-			);
-			name = Game_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		09CBCB2C18FAB602005E2EE7 /* Menu_iPhone.storyboard */ = {
+		09CBCB2C18FAB602005E2EE7 /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				09CBCB3118FAB643005E2EE7 /* Base */,
 				09CBCB3718FAB65D005E2EE7 /* en */,
 				09CBCB3918FAB65D005E2EE7 /* lt-LT */,
 			);
-			name = Menu_iPhone.storyboard;
+			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

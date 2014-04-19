@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Match.h"
-#import "MenuViewController.h"
+
+@class Match;
 
 @interface GameViewController : UIViewController <UIAlertViewDelegate>
 
@@ -16,8 +16,6 @@
 
 @property (strong, nonatomic) Match *match;
 @property BOOL playerStarts;
-
-+ (GameViewController *)instantiateWithPlayerStarts:(BOOL)playerStarts;
 
 - (void)redrawBoard;
 

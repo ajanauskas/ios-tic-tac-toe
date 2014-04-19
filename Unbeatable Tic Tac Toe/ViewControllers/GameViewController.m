@@ -7,21 +7,12 @@
 //
 
 #import "GameViewController.h"
+#import "Match.h"
 
 @implementation GameViewController
 
 @synthesize match = _match;
 @synthesize playerStarts = _playerStarts;
-
-+ (GameViewController *)instantiateWithPlayerStarts:(BOOL)playerStarts
-{
-    NSString *storyboardName = @"Game_iPhone";
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
-    GameViewController *gameViewController = [storyboard instantiateViewControllerWithIdentifier:@"GameViewController"];
-    gameViewController.playerStarts = playerStarts;
-    
-    return gameViewController;
-}
 
 - (void)viewDidLoad
 {
@@ -32,7 +23,7 @@
     [self redrawBoard];
 }
 
-#pragma helpers
+#pragma mark private implementation
 
 - (void)redrawBoard
 {
@@ -67,7 +58,7 @@
     }
 }
 
-#pragma actions
+#pragma mark actions
 
 - (IBAction)didSurrender:(id)sender
 {
@@ -116,7 +107,7 @@
     }
 }
 
-#pragma UIAlertView delegate
+#pragma mark UIAlertView delegate
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
