@@ -17,8 +17,6 @@
 @property (strong, nonatomic) Match *match;
 @property BOOL playerStarts;
 
-- (void)redrawBoard;
-
 - (IBAction)didSurrender:(id)sender;
 - (IBAction)didClickOnBoardCell:(id)sender;
 

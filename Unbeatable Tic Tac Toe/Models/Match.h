@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Board.h"
-#import "TicTacToeAI.h"
+
+@class Board, TicTacToeAI;
 
 static const NSInteger kInProgress = 0;
 static const NSInteger kEnded = 1;

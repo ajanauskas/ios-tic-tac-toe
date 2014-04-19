@@ -7,6 +7,7 @@
 //
 
 #import "TicTacToeAI.h"
+#import "Board.h"
 
 @interface TicTacToeAI()
 
@@ -24,7 +25,7 @@
 
 @synthesize board = _board;
 
-# pragma private implementation
+# pragma mark private implementation
 
 - (NSInteger)chooseRandomMoveFromList:(NSArray*)list
 {
@@ -135,7 +136,7 @@
     return kMoveImpossible;
 }
 
-# pragma public implementation
+# pragma mark public implementation
 
 - (id)initWithBoard:(Board *)board
 {

@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Board.h"
+
+@class Board;
 
 static const NSInteger kMoveImpossible = -1;
 

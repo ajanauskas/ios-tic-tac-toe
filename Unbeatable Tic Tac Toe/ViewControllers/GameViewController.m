@@ -8,6 +8,16 @@
 
 #import "GameViewController.h"
 #import "Match.h"
+#import "Board.h"
+
+NSInteger const kDefaultBoardSize = 9;
+
+@interface GameViewController ()
+
+- (void)redrawBoard;
+- (void)drawCellAtTag:(NSInteger)tag;
+
+@end
 
 @implementation GameViewController
 
@@ -27,34 +37,37 @@
 
 - (void)redrawBoard
 {
+    for (NSInteger i = 1; i <= kDefaultBoardSize; i++) {
+        [self drawCellAtTag:i];
+    }
+}
+
+- (void)drawCellAtTag:(NSInteger)tag
+{
     UIImage *imageOfCross = [UIImage imageNamed:@"cross256.png"];
     UIImage *imageOfCircle = [UIImage imageNamed:@"circle256.png"];
+    UIButton *button = (UIButton *)[self.view viewWithTag:tag];
     
-    for (int i = 1; i <= kBoardSize; i++) {
-        NSInteger tag = (NSInteger)i;
-        UIButton *button = (UIButton *)[self.view viewWithTag:tag];
-        
-        switch ([self.match.board getCellAt:tag - 1]) {
-            case kPlayer:
-                if (self.match.playerStarts) {
-                    [button setImage:imageOfCross forState:UIControlStateNormal];
-                }
-                else {
-                    [button setImage:imageOfCircle forState:UIControlStateNormal];
-                }
-                break;
-            case kAI:
-                if (self.match.playerStarts) {
-                    [button setImage:imageOfCircle forState:UIControlStateNormal];
-                }
-                else {
-                    [button setImage:imageOfCross forState:UIControlStateNormal];
-                }
-                break;
-            default:
-                [button setImage:nil forState:UIControlStateNormal];
-                break;
-        }
+    switch ([self.match.board getCellAt:tag - 1]) {
+        case kPlayer:
+            if (self.match.playerStarts) {
+                [button setImage:imageOfCross forState:UIControlStateNormal];
+            }
+            else {
+                [button setImage:imageOfCircle forState:UIControlStateNormal];
+            }
+            break;
+        case kAI:
+            if (self.match.playerStarts) {
+                [button setImage:imageOfCircle forState:UIControlStateNormal];
+            }
+            else {
+                [button setImage:imageOfCross forState:UIControlStateNormal];
+            }
+            break;
+        default:
+            [button setImage:nil forState:UIControlStateNormal];
+            break;
     }
 }
 

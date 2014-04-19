@@ -7,6 +7,8 @@
 //
 
 #import "Match.h"
+#import "Board.h"
+#import "TicTacToeAI.h"
 
 @interface Match()
 
@@ -22,7 +24,7 @@
 @synthesize playerStarts = _playerStarts;
 @synthesize AI=_ai;
 
-#pragma private implementation
+#pragma mark private implementation
 
 - (void)makeAIMovement
 {
@@ -33,7 +35,7 @@
     }
 }
 
-#pragma public impementation
+#pragma mark public impementation
 
 - (id)init
 {
