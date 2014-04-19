@@ -29,6 +29,7 @@
 		09CBCB3C18FAB877005E2EE7 /* Match.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CBCB3B18FAB877005E2EE7 /* Match.m */; };
 		09CBCB3F18FAEF80005E2EE7 /* TicTacToeAI.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CBCB3E18FAEF80005E2EE7 /* TicTacToeAI.m */; };
 		09CBCB4218FB0549005E2EE7 /* MatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CBCB4118FB0549005E2EE7 /* MatchTests.m */; };
+		09EEA5401902A95D002665F0 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EEA53F1902A95D002665F0 /* AboutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		09CBCB3D18FAEF80005E2EE7 /* TicTacToeAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicTacToeAI.h; sourceTree = "<group>"; };
 		09CBCB3E18FAEF80005E2EE7 /* TicTacToeAI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicTacToeAI.m; sourceTree = "<group>"; };
 		09CBCB4118FB0549005E2EE7 /* MatchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchTests.m; sourceTree = "<group>"; };
+		09EEA53E1902A95D002665F0 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		09EEA53F1902A95D002665F0 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +220,8 @@
 				09C7E58818F989F300BA4F64 /* GameViewController.m */,
 				09C7E58918F989F300BA4F64 /* MainViewController.h */,
 				09C7E58A18F989F300BA4F64 /* MainViewController.m */,
+				09EEA53E1902A95D002665F0 /* AboutViewController.h */,
+				09EEA53F1902A95D002665F0 /* AboutViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 			files = (
 				09CBCB3F18FAEF80005E2EE7 /* TicTacToeAI.m in Sources */,
 				09C7E58B18F989F300BA4F64 /* GameViewController.m in Sources */,
+				09EEA5401902A95D002665F0 /* AboutViewController.m in Sources */,
 				09C7E58C18F989F300BA4F64 /* MainViewController.m in Sources */,
 				09955DF818F5C11200AAF482 /* AppDelegate.m in Sources */,
 				09CBCB3C18FAB877005E2EE7 /* Match.m in Sources */,

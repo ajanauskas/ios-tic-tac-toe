@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "GameViewController.h"
+#import "AboutViewController.h"
 
 NSString * const MainIPhoneStoryBoard = @"Main_iPhone";
 
@@ -17,12 +18,7 @@ NSString * const MainIPhoneStoryBoard = @"Main_iPhone";
 
 @implementation MainViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-
-#pragma events
+#pragma mark actions
 
 - (IBAction)didClickStartButton:(id)sender
 {
@@ -33,6 +29,13 @@ NSString * const MainIPhoneStoryBoard = @"Main_iPhone";
     gameViewController.playerStarts = playerStarts;
     
     [self presentViewController:gameViewController animated:YES completion:nil];
+}
+
+- (IBAction)didClickAboutButton:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:MainIPhoneStoryBoard bundle:nil];
+    AboutViewController *aboutViewController = [storyboard instantiateViewControllerWithIdentifier:@"AboutViewController"];
+    
+    [self presentViewController:aboutViewController animated:YES completion:nil];
 }
 
 @end

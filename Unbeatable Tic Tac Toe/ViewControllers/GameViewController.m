@@ -31,6 +31,12 @@ NSInteger const kDefaultBoardSize = 9;
     self.match = [[Match alloc] initWithPlayerStarts:self.playerStarts];
     
     [self redrawBoard];
+    
+    UISwipeGestureRecognizer *mSwipeDownRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeDown:)];
+    
+    [mSwipeDownRecognizer setDirection:(UISwipeGestureRecognizerDirectionDown)];
+    
+    [[self view] addGestureRecognizer:mSwipeDownRecognizer];
 }
 
 #pragma mark private implementation
@@ -139,6 +145,13 @@ NSInteger const kDefaultBoardSize = 9;
         [self.match reset];
         [self redrawBoard];
     }
+}
+
+# pragma mark UISwipeGestureRecognizer
+
+- (void)didSwipeDown:(UIGestureRecognizer *)gestureRecognizer
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

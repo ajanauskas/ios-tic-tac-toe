@@ -11,5 +11,6 @@
 @interface MainViewController : UIViewController
 
 - (IBAction)didClickStartButton:(id)sender;
+- (IBAction)didClickAboutButton:(id)sender;
 
 @end
